@@ -51,10 +51,28 @@ streamlit run app.py
 ## GitHub'a Deploy
 ```bash
 git add .
-git commit -m "İlk commit"
+git commit -m "İlk sürüm"
 git push origin main
 ```
-Streamlit Cloud: https://share.streamlit.io — repo'yu bağla, .env değişkenlerini Secrets'a gir.
+
+## Streamlit Cloud Deployment 🚀
+Uygulamanızı **Streamlit Cloud** platformunda yayınlamak için şu adımları izleyin:
+
+1. [Streamlit Cloud](https://share.streamlit.io/) sitesine gidin ve GitHub hesabınızla giriş yapın.
+2. **"Create app"** butonuna tıklayın.
+3. Repository olarak `nejdettut/ilac-project-130` seçin.
+4. "Main file path" kısmına `app.py` yazın.
+5. **ÖNEMLİ:** Deployment başlamadan önce **"Advanced settings..."** kısmına tıklayın.
+6. **"Secrets"** bölümüne `.env` dosyanızdaki anahtarları şu formatta yapıştırın:
+
+```toml
+GROQ_API_KEY = "SİZİN_GROQ_ANAHTARINIZ"
+GEMINI_API_KEY = "SİZİN_GEMINI_ANAHTARINIZ"
+# Opsiyonel:
+# SERPAPI_KEY = "SİZİN_SERPAPI_ANAHTARINIZ"
+```
+
+7. **"Deploy!"** butonuna basın.
 
 ## ⚠️ Yasal Uyarı
 Bu uygulama eğitim amaçlıdır. Tıbbi tavsiye vermez.
